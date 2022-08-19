@@ -1,9 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import Header from './components/Header/Header'
+import Counter from './components/UI/Counter';
+import Hero from './components/UI/Hero'
+import Services from './components/UI/Services';
 
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <>
+      <Header />
+      <Hero/>
+      <Counter/>
+      <Services />
+    </>
   );
 }
 
