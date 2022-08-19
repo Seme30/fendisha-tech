@@ -1,0 +1,64 @@
+
+.hero__wrapper{
+    display: flex;
+    justify-self: space-between;
+    align-items: center;
+}
+.hero__content{
+    margin-top: 40px;
+    padding-left: 30px;
+}
+.hero__content, .hero__img__wrapper
+{
+    width: 50%;
+}
+
+.hero__content h2{
+    font-size: 2.5rem;
+}
+
+.hero__content .description{
+    margin-top: 40px;
+    font-style: 1.1rem;
+}
+
+.highlight{
+    color: var(--primary-color);
+}
+
+.hero__btns{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.primary__btn, .secondary__btn{
+    padding: 0.8rem 1.5rem;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.primary__btn{
+    background: var(--btn-secondary-bg);
+    border: 1px solid var(--btn-primary-bg);
+}
+
+.primary__btn:hover{
+    background: var(--btn-primary-bg);
+    border: 1px solid var(--btn-secondary-bg);
+}
+
+.secondary__btn{
+    background: var(--btn-primary-bg);
+}
