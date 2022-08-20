@@ -14,7 +14,7 @@
 .service__item{
     background: var(--card-bg);
     width: 25%;
-    padding: 30px 15px;
+    padding: 15px 15px;
     text-align: center;
     border-radius: .5rem;
     cursor: pointer;
@@ -37,7 +37,16 @@
     margin-bottom: 30px;
     border: 1px solid var(--primary-color);
 }
-
+.light-theme .service__item{
+    background: #effcff;
+}
+.light-theme .service__icon{
+    background: var(--primary-color);
+    border: 1px solid #fff;
+}
+.light-theme .service__icon i{
+    color: #fff;
+}
 .service__icon i{
     font-size: 2rem;
     color: var(--primary-color);

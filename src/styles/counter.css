@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 40px 20px;
+    padding: 1rem;
 }
 
 .counter__item{
@@ -11,8 +12,9 @@
 }
 
 .counter__number, .counter__title{
-    background: var(--counter-color);
+    color: var(--small-text-color);
     background-size: 100% 100%;
+
     background-clip: text;   
 }
 

@@ -61,10 +61,17 @@ p{
   --team-card-bg: #fff;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body{
   background: var(--body-bg);
   font-family: var(--font-name);
-  margin: 0 20px;
+  margin: 0;
 }
 
 a{
@@ -79,8 +86,7 @@ h1,h2{
 
 .conatiner {
   width: 1140px;
-  padding: 0px 15px;
-  margin: auto;
+  margin: 0 15px;
 }
 
 section{
@@ -96,4 +102,29 @@ section{
 .subtitle{
   font-size: 1rem;
   color: var(--primary-color);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.light-theme .counter{
+  background: var(--counter-section-bg);
+}
+
+.light-theme .secondary__btn{
+  border: 1px solid var(--primary-color);
+  color: #090238;
+  font-weight: 500;
+}
+.light-theme .secondary__btn:hover{
+  border: 1px solid var(--btn-secondary-bg);
+  background: var(--primary-color);
+}
+.light-theme .primary__btn:hover{
+    background: var(--btn-primary-bg);
+    color: #090238;
+    border: 1px solid var(--btn-secondary-bg);
+}
+
+.light-theme a{
+  font-weight: 500;
 }

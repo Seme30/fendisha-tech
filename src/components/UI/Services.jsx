@@ -26,7 +26,7 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <section id="services">
+    <section id="service">
       <div className="container">
         <div className="services__top-content">
           <h6 className="subtitle">Our Services</h6>
