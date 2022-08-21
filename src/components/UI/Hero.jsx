@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="hero__wrapper">
           <div className="hero__content">
             <div>
-              <h2> We Provide a Perfect</h2>
+              <h2> We Provide Perfect</h2>
               <h2> Service To Create Digital </h2>
               <h2> Presence for your buisness</h2>
             </div>

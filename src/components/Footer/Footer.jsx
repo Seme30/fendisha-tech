@@ -4,44 +4,45 @@ import "./footer.css";
 const quicklinks01 = [
   {
     path: "#",
-    display: "Marketing",
+    display: "App Development",
   },
   {
     path: "#",
-    display: "Analytics",
+    display: "Web Design",
   },
   {
     path: "#",
-    display: "Commerce",
+    display: "Graphics Design",
   },
 ];
 const quicklinks02 = [
   {
     path: "#",
-    display: "Pricing",
+    display: "Home",
   },
   {
     path: "#",
-    display: "Documentation",
+    display: "About Us",
   },
   {
     path: "#",
-    display: "Guides",
+    display: "Services",
+  },
+  {
+    path: "#",
+    display: "Projects",
   },
 ];
 
 const quicklinks03 = [
   {
-    path: "#",
-    display: "About",
+    display: "Addis Abeba, Ethiopia",
   },
   {
-    path: "#",
-    display: "Jobs",
+    display: "+251949624951",
   },
   {
-    path: "#",
-    display: "Blog",
+    display: "info@fendishatech.com",
   },
 ];
 
@@ -63,7 +64,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="footer__quick-links">
-            <div className="quick__links-title">Solutions</div>
+            <div className="quick__links-title">Services</div>
             <ul className="quick__links">
               {quicklinks01.map((item, index) => (
                 <li className="quick__link-item" key={index}>
@@ -73,7 +74,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer__quick-links">
-            <div className="quick__links-title">Support</div>
+            <div className="quick__links-title">Quick Links</div>
             <ul className="quick__links">
               {quicklinks02.map((item, index) => (
                 <li className="quick__link-item" key={index}>
@@ -83,11 +84,11 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer__quick-links">
-            <div className="quick__links-title">Company</div>
-            <ul className="quick__links">
+            <div className="quick__links-title">Contact</div>
+            <ul className="quick__link">
               {quicklinks03.map((item, index) => (
-                <li className="quick__link-item" key={index}>
-                  <a href={item.path}> {item.display}</a>
+                <li className="quick__link-i" key={index}>
+                  <label> {item.display}</label>
                 </li>
               ))}
             </ul>

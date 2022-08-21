@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/about.css";
-import AboutImg from "../../images/ME now.png";
+import Developer from "../../images/Developer.svg";
 
 const chooseData = [
   {
@@ -39,7 +39,7 @@ const About = () => {
             </div>
             <div className="choose__item-wrapper">
               {chooseData.map((item, index) => (
-                <div className="choose__us-item">
+                <div className="choose__us-item" key={index}>
                   <span className="choose__us-icon">
                     <i class={item.icon}></i>
                   </span>
@@ -52,7 +52,7 @@ const About = () => {
             </div>
           </div>
           <div className="about__img">
-            <img src={AboutImg} alt="about-img" />
+            <img src={Developer} alt="about-img" />
           </div>
         </div>
       </div>

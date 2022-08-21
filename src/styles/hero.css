@@ -33,6 +33,43 @@
     column-gap: 1.5rem;
 }
 
+@media only screen and (max-width: 992px){
+    .hero__content h2{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .hero__content h2{
+        font-size: 1.5rem;
+        line-height: 45px;
+    }
+
+    .hero__content p{
+        font-size: 0.9rem;
+    }
+
+    .primary__btn, .secondary__btn{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .hero__content{
+        width: 100%;
+    }
+
+    .hero__img{
+        display: none;
+    }
+
+    .hero__wrapper{
+        flex-direction: column;
+    }
+
+}
+
 
 img{
     width: 100%;

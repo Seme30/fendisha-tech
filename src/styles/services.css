@@ -57,3 +57,34 @@
     color: var(--primary-color);
     margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 992px){
+    .services__top-content h2{
+        font-size: 1.5rem;
+    }
+
+    .service__item_wrapper{
+        flex-wrap: wrap;
+        column-gap: 1rem;
+    }
+
+    .service__item{
+        width: 30%;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .service__item{
+        width: 50%;
+    }
+    .service__title{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 567px){
+    .service__item{
+        width: 100%;
+    }
+}
