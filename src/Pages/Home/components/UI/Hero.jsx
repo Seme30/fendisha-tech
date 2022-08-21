@@ -1,5 +1,5 @@
 import React from "react";
-import Team from "../../images/Team.svg";
+import front from "../../images/front.svg";
 import "../../styles/hero.css";
 
 const Hero = () => {
@@ -19,13 +19,12 @@ const Hero = () => {
             </p>
 
             <div className="hero__btns">
-              <button className="primary__btn">Get Started Now</button>
-              <button className="secondary__btn">Discover More</button>
+              <button className="primary__btn">Contact Us Now</button>
             </div>
           </div>
           <div className="hero__img__wrapper">
             <div className="hero__img">
-              <img src={Team} alt="hero-img" />
+              <img src={front} alt="hero-img" />
             </div>
           </div>
         </div>

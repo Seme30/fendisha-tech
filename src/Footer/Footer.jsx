@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 const quicklinks01 = [
@@ -7,7 +8,7 @@ const quicklinks01 = [
     display: "App Development",
   },
   {
-    path: "#",
+    path: "/webdevelopment",
     display: "Web Design",
   },
   {
@@ -17,7 +18,7 @@ const quicklinks01 = [
 ];
 const quicklinks02 = [
   {
-    path: "#",
+    path: "/",
     display: "Home",
   },
   {
@@ -25,7 +26,7 @@ const quicklinks02 = [
     display: "About Us",
   },
   {
-    path: "#",
+    path: "Services",
     display: "Services",
   },
   {
@@ -68,7 +69,7 @@ const Footer = () => {
             <ul className="quick__links">
               {quicklinks01.map((item, index) => (
                 <li className="quick__link-item" key={index}>
-                  <a href={item.path}> {item.display}</a>
+                  <Link href={item.path}> {item.display}</Link>
                 </li>
               ))}
             </ul>
@@ -78,7 +79,7 @@ const Footer = () => {
             <ul className="quick__links">
               {quicklinks02.map((item, index) => (
                 <li className="quick__link-item" key={index}>
-                  <a href={item.path}> {item.display}</a>
+                  <Link to={item.path}> {item.display}</Link>
                 </li>
               ))}
             </ul>

@@ -1,5 +1,8 @@
 import React, {useRef, useEffect} from "react";
+import Logo from '../Pages/Home/images/logo.png'
+import Logolight from '../Pages/Home/images/Fendisha-light.png'
 import "./header.css";
+
 
 const nav__links = [
   {
@@ -23,7 +26,6 @@ const nav__links = [
     display: "Blogs",
   },
 ];
-
 
 const Header = ({ theme, toggleTheme }) => {
 
@@ -65,8 +67,8 @@ const Header = ({ theme, toggleTheme }) => {
       <div className="container">
         <div className="nav__wrapper">
           {/* logo */}
-          <div className="logo">
-            <h2>Fendisha</h2>
+          <div className="logo"ref={menuRef}>
+            <img src={ theme==='light-theme'? Logolight: Logo} alt ='logo'></img>
           </div>
 
           {/* navigation */}

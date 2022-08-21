@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/testimonials.css";
 import Slider from "react-slick";
 import img1 from "../../images/Me.png";
-import img from '../../logo.svg'
+import img from '../../../../logo.svg'
 import img2 from '../../images/ME now.png'
 
 const Testimonials = () => {
