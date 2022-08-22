@@ -1,0 +1,32 @@
+
+.webdetail__wrapper{
+ margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.webdetail__content{
+    background: var(--card-bg);
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: .5rem;
+    cursor: pointer;
+
+}
+
+.webdetail__content:hover{
+    transform: scale(1.1);
+}
+
+.webdetail__content img{
+    width: 45%;
+    height: 40%;
+    object-fit: contain;
+}
+
+.webdetial__content-des{
+    text-overflow: clip;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}

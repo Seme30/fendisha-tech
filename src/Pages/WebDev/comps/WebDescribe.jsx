@@ -1,18 +1,14 @@
 import React from "react";
-import website from '../images/website.svg';
-import '../styles/webintro.css'
+import jscode from "../images/jscode.svg";
+import "../styles/webdescribe.css";
 
-const WebIntro = () => {
+const WebDescribe = () => {
   return (
     <section className="section web__section">
       <div className="container">
-        <h2 className="highlight web__title" > Web Design and Development</h2>
         <div className="web__wrapper">
-        <div className="web__img">
-            <img src={website} alt="website-img" />
-          </div>
           <div className="web__content">
-          <h6 className="subtitle">Web design</h6>
+            <h6 className="subtitle">Website Development</h6>
             <p className="description web__content-des">
               We create websites that automatically attract any business's
               target audience We have been providing businesses with
@@ -23,10 +19,13 @@ const WebIntro = () => {
               owner and visitors.
             </p>
           </div>
+          <div className="web__img">
+            <img src={jscode} alt="website-img" />
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default WebIntro;
+export default WebDescribe;
