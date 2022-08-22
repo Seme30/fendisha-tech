@@ -25,13 +25,11 @@ function App() {
     document.body.className = theme
   }, [theme])
 
-
-
   return (
     <Router>
       <Header theme ={theme} toggleTheme = {toggleTheme}/>
         <Routes>
-          <Route path='/' element={<Home theme = {theme}/>}>
+          <Route path='/' element={<Home />}>
           </Route>
           <Route path='/webdevelopment' element={<WebDevelopment/>}>
             

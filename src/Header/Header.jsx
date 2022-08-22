@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from "react";
 import Logo from '../Pages/Home/images/logo.png'
 import Logolight from '../Pages/Home/images/Fendisha-light.png'
+import { Link } from "react-router-dom";
 import "./header.css";
 
 
@@ -67,9 +68,15 @@ const Header = ({ theme, toggleTheme }) => {
       <div className="container">
         <div className="nav__wrapper">
           {/* logo */}
+          <Link to='/'>
           <div className="logo"ref={menuRef}>
-            <img src={ theme==='light-theme'? Logolight: Logo} alt ='logo'></img>
+           
+            <img src={ theme==='light-theme'? Logolight: Logo} alt ='logo'>
+            
+            </img>
+            
           </div>
+          </Link>
 
           {/* navigation */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>

@@ -8,10 +8,10 @@ import About from './components/UI/About';
 import Testimonials from './components/UI/Testimonials';
 import NewsLetter from './components/UI/NewsLetter';
 
-const Home = (theme) => {
+const Home = () => {
   return (
     <>
-      <Hero theme = {theme}/>
+      <Hero />
       <Counter/>
       <Services />
       <About/>

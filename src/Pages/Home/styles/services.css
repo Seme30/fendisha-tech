@@ -1,4 +1,7 @@
 
+#service{
+    padding: 0 15px;
+}
 .services__top-content{
     text-align: center;
     margin-bottom: 50px;

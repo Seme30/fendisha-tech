@@ -73,7 +73,7 @@ p{
 body{
   background: var(--body-bg);
   font-family: var(--font-name);
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
 a{
@@ -92,7 +92,6 @@ h1,h2{
 
 .conatiner {
   width: 1140px;
-  margin: 0 15px;
 }
 
 section{

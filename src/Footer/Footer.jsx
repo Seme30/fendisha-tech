@@ -4,7 +4,7 @@ import "./footer.css";
 
 const quicklinks01 = [
   {
-    path: "#",
+    path: "/appdevelopment",
     display: "App Development",
   },
   {
@@ -12,7 +12,7 @@ const quicklinks01 = [
     display: "Web Design",
   },
   {
-    path: "#",
+    path: "/graphicsdesign",
     display: "Graphics Design",
   },
 ];
@@ -48,8 +48,7 @@ const quicklinks03 = [
 ];
 
 const Footer = () => {
-
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="container">
@@ -59,9 +58,10 @@ const Footer = () => {
             <p className="description">Grow with us</p>
             <p className="small__text description">
               {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-              officia porro aperiam repellendus? Dolorum enim neque eligendi
-              sapiente quia nisi.
+              Fendisha is an Ethiopian-based Professional IT Solution and
+              Digital Marketing Company. Which Offers All IT-Related Services
+              Website Design | Mobile App Development | Graphic Design | and
+              Other IT-Related Services
             </p>
           </div>
           <div className="footer__quick-links">
@@ -69,7 +69,7 @@ const Footer = () => {
             <ul className="quick__links">
               {quicklinks01.map((item, index) => (
                 <li className="quick__link-item" key={index}>
-                  <Link href={item.path}> {item.display}</Link>
+                  <Link to={item.path}> {item.display}</Link>
                 </li>
               ))}
             </ul>
@@ -94,7 +94,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
         </div>
 
         <p className="copyright"> Copyright {year}. All rights reserved.</p>
