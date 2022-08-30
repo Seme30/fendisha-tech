@@ -26,7 +26,8 @@
 }
 
 .webdetial__content-des{
-    text-overflow: clip;
+    max-lines: 2;
+    text-overflow: ellipsis;
     font-size: 0.8rem;
     margin-bottom: 20px;
 }

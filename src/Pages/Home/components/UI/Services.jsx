@@ -4,19 +4,19 @@ import "../../styles/services.css";
 
 const serviceData = [
   {
-    path: "appdevelopment",
+    path: "/appdevelopment",
     icon: "ri-apps-line",
     title: "App Development",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet repellendus at, hic voluptas nulla iste ut qui voluptatem voluptate!",
   },
   {
-    path: "webdevelopment",
+    path: "/webdevelopment",
     icon: "ri-code-s-slash-line",
     title: "Web Design",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet repellendus at, hic voluptas nulla iste ut qui voluptatem voluptate!",
   },
   {
-    path: "graphics",
+    path: "/graphicsdesign",
     icon: "ri-landscape-line",
     title: "Graphics Design",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet repellendus at, hic voluptas nulla iste ut qui voluptatem voluptate!",

@@ -1,19 +1,15 @@
 import React from "react";
-import website from "../images/website.svg";
-import "../styles/webintro.css";
+import "../styles/appdetail.css";
+import phone from "../images/Iphone.svg";
 
-const WebIntro = () => {
+const AppDetail = () => {
   return (
-    <section className="section web__section">
+    <section className="section app__section">
       <div className="container">
-        <h2 className="highlight web__title"> Website Design and Development</h2>
-        <div className="web__wrapper">
-          <div className="web__img">
-            <img src={website} alt="website-img" />
-          </div>
-          <div className="web__content">
-            <h6 className="subtitle">Web design</h6>
-            <p className="description web__content-des">
+        <div className="app__wrappers">
+          <div className="app__content">
+            <h6 className="subtitle">App Development</h6>
+            <p className="description app__content-des">
               We create websites that automatically attract any business's
               target audience We have been providing businesses with
               user-centric designs that are both simple and appealing for years.
@@ -23,10 +19,16 @@ const WebIntro = () => {
               owner and visitors.
             </p>
           </div>
+          <div className="app__detail">
+            <div className="appdetail__content">
+              <img src={phone} alt="app-img" />
+              <button className="secondary__btn">Contact us</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default WebIntro;
+export default AppDetail;

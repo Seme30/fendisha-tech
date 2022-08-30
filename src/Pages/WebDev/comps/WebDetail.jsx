@@ -1,16 +1,19 @@
 import React from "react";
 import "../styles/webdetail.css";
 import img1 from '../images/jscode.svg'
+import content from '../images/Content.svg'
+import landing from '../images/Landing_Page.svg'
+import apis from '../images/api.svg'
 
 
 const webDetail = [
   {
-    imgUrl: img1,
+    imgUrl: content,
     title: "CMS",
     desc: "If you are in need of content management system with wordpress or drupal, you are in the right place",
   },
   {
-    imgUrl: img1,
+    imgUrl: landing,
     title: "Landing page",
     desc: "If you are in need of a landing page to be designed for your website, you are on the right spot, we will deliver you with the code in no time",
   },
@@ -20,7 +23,7 @@ const webDetail = [
     desc: "If you are in need of an e-commerce website with your own requirements, you can contact us with the link below",
   },
   {
-    imgUrl: img1,
+    imgUrl: apis,
     title: "Third-Party Api integration",
     desc: "If you wish to integrate your system with other third party services, you are in the right place",
   },

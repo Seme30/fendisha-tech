@@ -1,0 +1,18 @@
+.app__wrappers{
+    background: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app__detail{
+    width: 50%;
+    color: wheat;
+}
+
+.appdetail__content{
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: .5rem;
+    cursor: pointer;
+}
