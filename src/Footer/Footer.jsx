@@ -22,22 +22,22 @@ const quicklinks02 = [
     display: "Home",
   },
   {
-    path: "#",
+    path: "/abouts",
     display: "About Us",
   },
   {
-    path: "Services",
+    path: "/services",
     display: "Services",
   },
   {
-    path: "#",
+    path: "/projects",
     display: "Projects",
   },
 ];
 
 const quicklinks03 = [
   {
-    display: "Addis Abeba, Ethiopia",
+    display: "Addis Ababa, Ethiopia",
   },
   {
     display: "+251949624951",

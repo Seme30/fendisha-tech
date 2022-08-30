@@ -1,37 +1,35 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect, useState} from "react";
 import Logo from '../Pages/Home/images/logo.png'
 import Logolight from '../Pages/Home/images/Fendisha-light.png'
 import { Link } from "react-router-dom";
+import Dropdown from "./DropDown";
 import "./header.css";
-
 
 const nav__links = [
   {
-    path: "#home",
+    path: "/",
     display: "Home",
   },
   {
-    path: "#about",
+    path: "/services",
+    display: "Services",
+  },
+  {
+    path: "/abouts",
     display: "About",
   },
   {
-    path: "#service",
-    display: "Service",
-  },
-  {
-    path: "#projects",
-    display: "Projects",
-  },
-  {
-    path: "#blogs",
-    display: "Blogs",
+    path: "/contacts",
+    display: "Contact Us",
   },
 ];
+
 
 const Header = ({ theme, toggleTheme }) => {
 
   const headerRef = useRef(null)
   const menuRef = useRef(null)
+  const [dropdown, setDropdown] = useState(false);
 
   const headerFunc = ()=>{
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop> 80){
@@ -47,18 +45,18 @@ const Header = ({ theme, toggleTheme }) => {
     return ()=> window.removeEventListener('scroll', headerFunc)
   }, [])
 
-  const handleClick = e => {
-    e.preventDefault()
+  // const handleClick = e => {
+  //   e.preventDefault()
 
-    const targetAttr = e.target.getAttribute('href')
+  //   const targetAttr = e.target.getAttribute('href')
 
-    const location = document.querySelector(targetAttr).offsetTop;
+  //   const location = document.querySelector(targetAttr).offsetTop;
 
-    window.scrollTo({
-      left:0,
-      top: location-80
-    })
-  }
+  //   window.scrollTo({
+  //     left:0,
+  //     top: location-80
+  //   })
+  // }
 
   const toggleMenu = ()=> menuRef.current.classList.toggle('menu__active')
   
@@ -81,13 +79,29 @@ const Header = ({ theme, toggleTheme }) => {
           {/* navigation */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <ul className="menu">
-              {nav__links.map((item, index) => (
-                <li className="menu__item" key={index}>
-                  <a href={item.path} className="menu__link" onClick={handleClick}>
+              {nav__links.map((item, index) => {
+                if (item.display === "Services") {
+                  return (
+                    <li
+                    className="menu__item"
+                      key={index}
+                      onMouseEnter={() => setDropdown(true)}
+                      onMouseLeave={() => setDropdown(false)}
+                    >
+                      <Link to={item.path}>{item.display}</Link>
+                      {dropdown && <Dropdown />}
+                    </li>
+                  );
+                }
+                return (
+                  <li className="menu__item" key={index}>
+                  <Link to={item.path} className="menu__link">
                     {item.display}
-                  </a>
+                  </Link>
                 </li>
-              ))}
+                )
+              }
+              )}
             </ul>
           </div>
 

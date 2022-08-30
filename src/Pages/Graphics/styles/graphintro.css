@@ -1,0 +1,18 @@
+.graphics__title{
+    text-align: center;
+}
+
+.graphics__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.graphics__content, .graphics__img{
+    width: 50%;
+}
+
+.graphics__img img{
+    width: 75%;
+    height: 75%;
+}

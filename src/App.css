@@ -39,6 +39,10 @@ p{
   color: #f7f7f7;
 }
 
+ul{
+  color: #f7f7f7;
+}
+
 .light-theme {
   --body-bg: rgb(255, 255, 255);
   --heading-color: #0c123d;
@@ -129,7 +133,9 @@ section{
     color: #090238;
     border: 1px solid var(--btn-secondary-bg);
 }
-
+.light-theme ul{
+  color:#000;
+}
 .light-theme a{
   font-weight: 500;
 }
