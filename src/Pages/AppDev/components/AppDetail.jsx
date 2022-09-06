@@ -22,8 +22,8 @@ const AppDetail = () => {
           <div className="app__detail">
             <div className="appdetail__content">
               <img src={phone} alt="app-img" />
-              <button className="secondary__btn">Contact us</button>
             </div>
+            <button className="secondary__btn">Contact us</button>
           </div>
         </div>
       </div>

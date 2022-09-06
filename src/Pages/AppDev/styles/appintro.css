@@ -16,3 +16,41 @@
 .app__content{
     padding: 0 20px;
 }
+
+
+@media only screen and (max-width: 992px){
+    .app__content h2{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+    .app__content h6{
+        font-size: 1.8rem;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .app__content h2{
+        font-size: 1.5rem;
+        line-height: 45px;
+    }
+
+    .app__content p{
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .app__content{
+        width: 100%;
+    }
+
+    .app__img{
+        display: none;
+    }
+
+    .app__wrapper{
+        flex-direction: column;
+    }
+
+}

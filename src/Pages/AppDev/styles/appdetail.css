@@ -16,3 +16,27 @@
     border-radius: .5rem;
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 992px){
+    .app__content h2{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .hero__content{
+        width: 100%;
+    }
+
+    .appdetail__content img{
+        display: none;
+    }
+
+    .app__wrappers{
+        flex-direction: column;
+    }
+
+}

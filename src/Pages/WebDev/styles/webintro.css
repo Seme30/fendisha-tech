@@ -5,6 +5,7 @@
 }
 .web__title{
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .web__section{
@@ -24,4 +25,41 @@
     width: 50%;
     height: 50%;
     /* object-fit: contain; */
+}
+
+@media only screen and (max-width: 992px){
+    .web__content h2{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+    .web__content h6{
+        font-size: 1.8rem;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .web__content h2{
+        font-size: 1.5rem;
+        line-height: 45px;
+    }
+
+    .web__content p{
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .web__content{
+        width: 100%;
+    }
+
+    .web__img{
+        display: none;
+    }
+
+    .web__wrapper{
+        flex-direction: column;
+    }
+
 }

@@ -26,12 +26,8 @@ const quicklinks02 = [
     display: "About Us",
   },
   {
-    path: "/services",
-    display: "Services",
-  },
-  {
-    path: "/projects",
-    display: "Projects",
+    path: "/contactus",
+    display: "Contact us",
   },
 ];
 

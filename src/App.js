@@ -8,6 +8,8 @@ import Home from "./Pages/Home/Home";
 import WebDevelopment from "./Pages/WebDev/WebDevelopment";
 import Graphics from "./Pages/Graphics/Graphics";
 import AppDevelopment from "./Pages/AppDev/AppDevelopment";
+import ContactUs from "./Pages/ContactUs/ContactUs";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 
 function App() {
   const [theme, setTheme] = useState("");
@@ -28,6 +30,8 @@ function App() {
         <Route path="/webdevelopment" element={<WebDevelopment />}></Route>
         <Route path="/graphicsdesign" element={<Graphics />}></Route>
         <Route path="/appdevelopment" element={<AppDevelopment />}></Route>
+        <Route path='/contactus' element={<ContactUs />} ></Route>
+        <Route path='/abouts' element={<AboutUs />} ></Route>
       </Routes>
       <Footer />
     </Router>
