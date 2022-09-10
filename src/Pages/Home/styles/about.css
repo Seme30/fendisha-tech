@@ -78,10 +78,10 @@
     .about__wrapper{
         flex-direction: column;
     }
-    .about__content{
+    .about__content, .about__img{
         width: 100%;
     }
-    .about__img{
+    /* .about__img{
         display: none;
-    }
+    } */
 }

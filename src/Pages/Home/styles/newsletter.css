@@ -2,15 +2,15 @@
 .newsletter__wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .newsletter{
     background: var(--newsletter-bg);
 }
 
-.newsletter__content, .newsletter__form{
-    width: 50%;
+.newsletter__content{
+    text-align: center;
 }
 
 .news__content{
@@ -18,23 +18,6 @@
     padding: 0 20px;
 }
 
-.newsletter__form{
-    padding: 0.4rem;
-    margin: 0 15px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 0.5rem;
-}
-
-.newsletter__form input{
-    padding: 0.7rem 1.5rem;
-    border: none;
-    outline: none;
-    font-style: 1rem;
-    cursor: pointer;
-}
 
 .light-theme .newsletter{
     background: linear-gradient(

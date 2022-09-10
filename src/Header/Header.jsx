@@ -11,7 +11,7 @@ const nav__links = [
     display: "Home",
   },
   {
-    path: "/services",
+    path: "#",
     display: "Services",
   },
   {
@@ -20,7 +20,7 @@ const nav__links = [
   },
   {
     path: "/contactus",
-    display: "Contact Us",
+    display: "Contact",
   },
 ];
 
@@ -66,7 +66,7 @@ const Header = ({ theme, toggleTheme }) => {
       <div className="container">
         <div className="nav__wrapper">
           {/* logo */}
-          <Link to='/'>
+          <Link to='/' className="logo-link">
           <div className="logo"ref={menuRef}>
            
             <img src={ theme==='light-theme'? Logolight: Logo} alt ='logo'>
@@ -88,7 +88,7 @@ const Header = ({ theme, toggleTheme }) => {
                       onMouseEnter={() => setDropdown(true)}
                       onMouseLeave={() => setDropdown(false)}
                     >
-                      <Link to={item.path}>{item.display}</Link>
+                      <Link to={item.path} className="menu__link">{item.display}</Link>
                       {dropdown && <Dropdown />}
                     </li>
                   );

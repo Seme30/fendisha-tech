@@ -80,3 +80,21 @@
   grid-column: 1 / -1;
   text-align: right;
 }
+
+.email__return{
+  width: 10rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  padding: 15px 30px;
+}
+
+.email__return h1{
+  font-size: 2rem;
+  font-weight: 700; 
+}
+
+.email__return p{
+  font-size: 1.5rem;
+}

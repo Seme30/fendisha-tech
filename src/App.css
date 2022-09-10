@@ -52,7 +52,7 @@ ul{
   --counter-color: #fff;
   --counter-section-bg: #816aff;
   --link-color: #0c123d;
-  --link-active: #816aff
+  --link-active: #816aff;
   --newsletter-bg: linear-gradient(
     180deg,
     rgba(189, 243, 255, 1) 29%,
@@ -148,7 +148,7 @@ section{
 
 @media only screen and (max-width:768px){
   section{
-    padding: 40px 0px;
+    padding: 40px 20px;
   }
 }
 

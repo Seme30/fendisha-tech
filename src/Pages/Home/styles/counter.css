@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 40px 20px;
-    padding: 1rem;
+    padding: 3rem;
+    background: var(--newsletter-bg);
 }
 
 .counter__item{

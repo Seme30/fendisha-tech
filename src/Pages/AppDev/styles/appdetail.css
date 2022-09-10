@@ -5,18 +5,25 @@
     align-items: center;
 }
 
-.app__detail{
+.app__detail, .app__content{
     width: 50%;
     color: wheat;
 }
 
-.appdetail__content{
+.app__btn{
+    text-align: center;
+}
+
+/* .appdetail__content{
     padding: 30px 15px;
     text-align: center;
     border-radius: .5rem;
     cursor: pointer;
+} */
+.app__detail{
+    text-align: center;
+    padding: 30px 15px;
 }
-
 
 @media only screen and (max-width: 992px){
     .app__content h2{
@@ -27,13 +34,13 @@
 
 
 @media only screen and (max-width: 600px){
-    .hero__content{
+    .app__content, .appdetail__content img{
         width: 100%;
     }
 
-    .appdetail__content img{
+    /* .appdetail__content img{
         display: none;
-    }
+    } */
 
     .app__wrappers{
         flex-direction: column;

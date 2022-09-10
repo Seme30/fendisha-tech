@@ -1,7 +1,7 @@
 
 .app__title{
     text-align: center;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 .app__wrapper{
     display: flex;
@@ -19,6 +19,10 @@
 
 
 @media only screen and (max-width: 992px){
+
+    .app__title{
+        font-size: 2rem;
+    }
     .app__content h2{
         font-size: 2rem;
         line-height: 50px;
@@ -30,6 +34,9 @@
 }
 
 @media only screen and (max-width: 768px){
+    .app__title{
+        font-size: 1.8rem;
+    }
     .app__content h2{
         font-size: 1.5rem;
         line-height: 45px;
@@ -41,13 +48,15 @@
 }
 
 @media only screen and (max-width: 600px){
-    .app__content{
+
+
+    .app__content, .app__img{
         width: 100%;
     }
 
-    .app__img{
+    /* .app__img{
         display: none;
-    }
+    } */
 
     .app__wrapper{
         flex-direction: column;

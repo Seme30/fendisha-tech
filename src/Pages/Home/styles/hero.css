@@ -6,7 +6,8 @@
 }
 .hero__content{
     margin-top: 40px;
-    padding-left: 30px;
+    padding: 0 30px;
+    margin-bottom: 30px;
 }
 .hero__content, .hero__img__wrapper
 {
@@ -56,12 +57,12 @@
 }
 
 @media only screen and (max-width: 600px){
-    .hero__content{
+    .hero__content, .hero__img{
         width: 100%;
     }
 
     .hero__img{
-        display: none;
+        padding-top: 15px;
     }
 
     .hero__wrapper{

@@ -11,13 +11,13 @@ const NewsLetter = () => {
             <h2>
               Explore the {" "}
                <span className="highlight">hidden</span>
-               {" "}ideas and Subscribe!
+               {" "}ideas
             </h2>
           </div>
-          <div className="newsletter__form">
+          {/* <div className="newsletter__form">
             <input type="email" placeholder="Email"/>
             <button className="secondary__btn subscribe__btn">Subscribe Now</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

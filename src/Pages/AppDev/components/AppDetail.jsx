@@ -23,7 +23,7 @@ const AppDetail = () => {
             <div className="appdetail__content">
               <img src={phone} alt="app-img" />
             </div>
-            <button className="secondary__btn">Contact us</button>
+            <button className="secondary__btn app__btn">Contact us</button>
           </div>
         </div>
       </div>

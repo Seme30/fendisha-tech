@@ -6,6 +6,7 @@
 .web__title{
     text-align: center;
     margin-bottom: 50px;
+    font-size: 2.1rem;
 }
 
 .web__section{
@@ -28,6 +29,10 @@
 }
 
 @media only screen and (max-width: 992px){
+
+    .web__title{
+        font-size: 2rem;
+    }
     .web__content h2{
         font-size: 2rem;
         line-height: 50px;
@@ -39,6 +44,11 @@
 }
 
 @media only screen and (max-width: 768px){
+    .web__title{
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+    }
+
     .web__content h2{
         font-size: 1.5rem;
         line-height: 45px;
@@ -50,13 +60,13 @@
 }
 
 @media only screen and (max-width: 600px){
-    .web__content{
+    .web__content, .web__img{
         width: 100%;
     }
 
-    .web__img{
+    /* .web__img{
         display: none;
-    }
+    } */
 
     .web__wrapper{
         flex-direction: column;

@@ -1,5 +1,6 @@
 .graphics__title{
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .graphics__wrapper{
@@ -12,7 +13,35 @@
     width: 50%;
 }
 
+.graphics_btn{
+ text-align: center;
+}
+
 .graphics__img img{
     width: 75%;
     height: 75%;
+}
+
+
+@media only screen and (max-width: 992px){
+    .graphics__content h2{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .graphics__content, .graphics__img{
+        width: 100%;
+    }
+
+    /* .appdetail__content img{
+        display: none;
+    } */
+
+    .graphics__wrapper{
+        flex-direction: column;
+    }
+
 }
