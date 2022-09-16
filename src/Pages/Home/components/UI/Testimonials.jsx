@@ -1,9 +1,6 @@
 import React from "react";
 import "../../styles/testimonials.css";
 import Slider from "react-slick";
-import img1 from "../../images/Me.png";
-import img from '../../../../logo.svg'
-import img2 from '../../images/ME now.png'
 
 const Testimonials = () => {
   const settings = {
@@ -14,7 +11,7 @@ const Testimonials = () => {
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    swipeToSlide: true
+    swipeToSlide: true,
   };
 
   return (
@@ -28,57 +25,60 @@ const Testimonials = () => {
           <Slider {...settings}>
             <div className="slider__item">
               <p className="description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id,
-                minima vero, neque sint ipsa deleniti dolorum ullam harum
-                sapiente eum laudantium reprehenderit voluptates earum sed
-                fugiat aliquam at culpa sit.
+                Fendisha-tech Thank you for the work that you did. It was
+                perfect for what I needed, in fact better than I had hoped for.
+                But there is no question that nothing could prepare me for how
+                impressed and happy I am with the final result! Thank you again
+                for the excellent work.
               </p>
 
               <div className="customer__details">
                 <div className="customer__img">
-                  <img src={img1} alt="" />
+                  <i class="ri-user-line"></i>
                 </div>
                 <div>
-                  <h5 className="customer__name">Semahegn Adugna</h5>
-                  <p className="description">CEO, Workcreation</p>
+                  <h5 className="customer__name">Surafel</h5>
+                  <p className="description">Customer</p>
                 </div>
               </div>
             </div>
 
             <div className="slider__item">
               <p className="description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id,
-                minima vero, neque sint ipsa deleniti dolorum ullam harum
-                sapiente eum laudantium reprehenderit voluptates earum sed
-                fugiat aliquam at culpa sit.
+                Fendisha tech does a lovely work for us. the colors and the
+                deignes were termedous. it translated our ideal design more and
+                lively presented in a better. Fendisha played a key role in
+                supporting our company's vision and develop a quite impressive
+                website. thank you, it's pleasure working with you.
               </p>
 
               <div className="customer__details">
                 <div className="customer__img">
-                  <img src={img2} alt="" />
+                  <i class="ri-user-line"></i>
                 </div>
                 <div>
-                  <h5 className="customer__name">Abebe Beso</h5>
-                  <p className="description">Sr, Product Designer</p>
+                  <h5 className="customer__name">Befkir</h5>
+                  <p className="description">Customer</p>
                 </div>
               </div>
             </div>
 
             <div className="slider__item">
               <p className="description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id,
-                minima vero, neque sint ipsa deleniti dolorum ullam harum
-                sapiente eum laudantium reprehenderit voluptates earum sed
-                fugiat aliquam at culpa sit.
+                I would like to thank you for the quick and efficient service.
+                Your team did a great job on the graphics necessary for my
+                website. I really appreciate your efforts. When I noticed some
+                problems with the final product, your team was quick to address
+                them.
               </p>
 
               <div className="customer__details">
                 <div className="customer__img">
-                  <img src={img} alt="" />
+                  <i class="ri-user-line"></i>
                 </div>
                 <div>
-                  <h5 className="customer__name">React</h5>
-                  <p className="description">Javascript Library</p>
+                  <h5 className="customer__name">Adam</h5>
+                  <p className="description">Customer</p>
                 </div>
               </div>
             </div>

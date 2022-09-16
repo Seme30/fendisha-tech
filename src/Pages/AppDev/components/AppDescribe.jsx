@@ -1,13 +1,19 @@
 import React from "react";
 import "../styles/appdesc.css";
 import phone from "../images/Smartphone.svg";
+import { motion } from 'framer-motion'
 
 const AppDescribe = () => {
   return (
-    <section className="section app__section">
+    <section 
+    className="section app__section">
       <div className="container">
         <div className="app__wrapper">
-          <div className="app__content">
+          <motion.div 
+          initial={{ x: -50, opacity: 0.3}}
+          whileInView={{ x: 0, opacity: 1}}
+          transition={{duration: 0.5}}
+          className="app__content">
             <h6 className="subtitle">Benefits of Mobile App for business</h6>
             <p className="description app__content-des">
               <ul>
@@ -23,10 +29,16 @@ const AppDescribe = () => {
               Build an App for your Business
             </p>
             <button className="secondary__btn">Contact us</button>
-          </div>
-          <div className="app__img">
+          </motion.div>
+          <motion.div 
+          initial={{ x: 50, opacity: 0.3}}
+          whileInView={{ x: 0, opacity: 1}}
+          transition={{duration: 0.5}}
+          className="app__img">
             <img src={phone} alt="app-img" />
-          </div>
+          </motion.div>
+
+
         </div>
       </div>
     </section>

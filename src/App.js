@@ -33,7 +33,7 @@ function App() {
         <Route path='/contactus' element={<ContactUs />} ></Route>
         <Route path='/abouts' element={<AboutUs />} ></Route>
       </Routes>
-      <Footer />
+      <Footer theme={theme} />
     </Router>
   );
 }

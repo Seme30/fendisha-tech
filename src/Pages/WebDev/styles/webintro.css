@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 .web__title{
     text-align: center;
@@ -19,7 +20,7 @@
 }
 
 .web__content h6{
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .web__img{
@@ -38,9 +39,11 @@
         line-height: 50px;
     }
     .web__content h6{
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         line-height: 50px;
     }
+
+
 }
 
 @media only screen and (max-width: 768px){
@@ -60,6 +63,11 @@
 }
 
 @media only screen and (max-width: 600px){
+
+    .web__title{
+        padding-top: 20px;
+        font-size: 1.3rem;
+    }
     .web__content, .web__img{
         width: 100%;
     }
@@ -70,6 +78,10 @@
 
     .web__wrapper{
         flex-direction: column;
+    }
+
+    .web__content h6{
+        font-size: 1.3rem;
     }
 
 }

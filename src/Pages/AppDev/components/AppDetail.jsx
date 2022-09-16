@@ -1,29 +1,53 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/appdetail.css";
-import phone from "../images/Iphone.svg";
+import lottie from "lottie-web";
+import mobileapp from "../../../animations/mobile-development.json";
+import { Link } from "react-router-dom";
+import { motion } from 'framer-motion'
 
 const AppDetail = () => {
+  const anime = useRef(null);
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: anime.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: mobileapp,
+    });
+    return () => lottie.stop();
+    // More logic goes here
+  }, []);
+
   return (
     <section className="section app__section">
       <div className="container">
         <div className="app__wrappers">
-          <div className="app__content">
+          <motion.div 
+          initial={{ x: -50, opacity: 0.5}}
+          whileInView={{ x: 0, opacity: 1}}
+          transition={{duration: 0.5}}
+          className="app__content">
             <h6 className="subtitle">App Development</h6>
             <p className="description app__content-des">
-              We create websites that automatically attract any business's
-              target audience We have been providing businesses with
-              user-centric designs that are both simple and appealing for years.
-              Our designers team work hard to deliver websites that have top
-              notch user-experience and can create amazing websites that are not
-              only visually appealing but also easy to use for both website
-              owner and visitors.
+              With the help of our team of developers and designers, we will
+              build mobile apps for your services by employing latest app
+              development technologies and processes to create great user
+              experiences. We build mobile apps for a wide range of services,
+              including simple utility apps to help your business run more
+              efficiently.
             </p>
-          </div>
+          </motion.div>
           <div className="app__detail">
-            <div className="appdetail__content">
-              <img src={phone} alt="app-img" />
-            </div>
-            <button className="secondary__btn app__btn">Contact us</button>
+            <motion.div
+            initial={{ x: 50, opacity: 0.5}}
+            whileInView={{ x: 0, opacity: 1}}
+            transition={{duration: 0.5}}
+            ref={anime} className="appdetail__content"></motion.div
+            >
+            <Link to="/contactus">
+              <button className="secondary__btn app__btn">Contact us</button>
+            </Link>
           </div>
         </div>
       </div>

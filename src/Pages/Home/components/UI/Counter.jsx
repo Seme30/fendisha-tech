@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "../../styles/counter.css";
 
 
@@ -75,19 +76,33 @@ useEffect(()=>{
   return (
     <section className="counter" id="projects">
       <div className="container">
-        <div className="counter__wrapper">
-            <div className="counter__item">
-              <div className="counter__number">{clientNumber}</div>
+        <div 
+        className="counter__wrapper">
+            <motion.div 
+            initial={{scale: 0.5, opacity: 0.7}}
+            whileInView={{ scale: 1, opacity: 1}}
+            transition={{duration: 1}}
+            className="counter__item">
+              <div 
+              className="counter__number">{clientNumber}</div>
               <div className="counter__title">Clients</div>
-            </div>
-            <div className="counter__item">
+            </motion.div>
+            <motion.div 
+            initial={{scale: 0.5, opacity: 0.7}}
+            whileInView={{ scale: 1, opacity: 1}}
+            transition={{duration: 1}}
+            className="counter__item">
               <div className="counter__number">{unfinishedProNum}</div>
               <div className="counter__title">Running Projects</div>
-            </div>
-            <div className="counter__item">
+            </motion.div>
+            <motion.div 
+            initial={{scale: 0.5, opacity: 0.7}}
+            whileInView={{ scale: 1, opacity: 1}}
+            transition={{duration: 1}}
+            className="counter__item">
               <div className="counter__number">{finishedProNum}</div>
               <div className="counter__title">Projects Complete</div>
-            </div>
+            </motion.div>
         </div>
       </div>
     </section>

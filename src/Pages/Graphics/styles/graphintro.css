@@ -13,13 +13,17 @@
     width: 50%;
 }
 
+.graphics__content{
+    margin-right: 50px;
+}
+
 .graphics_btn{
  text-align: center;
 }
 
-.graphics__img img{
-    width: 75%;
-    height: 75%;
+.graphics__img div{
+    width: 70%;
+    margin: auto;
 }
 
 

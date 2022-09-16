@@ -76,6 +76,21 @@
     font-weight: 300;
 }
 
+.social__icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    padding: 10px;
+    column-gap: 2rem;
+}
+
+.social__icons a{
+    /* background-color: #555; */
+    width: 30%;
+}
+
+
 @media only screen and (max-width: 768px){
     .footer__logo{
         width: 50%;

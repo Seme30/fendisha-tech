@@ -7,6 +7,7 @@
     margin-bottom: 50px;
 }
 
+
 .service__item_wrapper{
     display: flex;
     justify-content: space-between;
@@ -21,11 +22,13 @@
     text-align: center;
     border-radius: .5rem;
     cursor: pointer;
+    height: 320px;
     
 }
 
 .service__item:hover{
     transform: scale(1.1);
+    transition: transform 0.5s ease-out;
 }
 
 .service__icon{

@@ -10,20 +10,55 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    
 }
 
+.navigation{
+    width: 40%;
+}
+
+
+    @keyframes navLinkFade{
+        from{
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+      
+        to{
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
+
+
 .menu {
+    height: 10vh;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    column-gap: 2.7rem;
+    margin: auto;
+    /* background-color: red; */
+}
+
+.menu__item{
     list-style: none;
+    /* background-color: #000; */
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+
+}
+
+.menu__item:hover{
+    color: var(--link-active);
 }
 
 .menu__link{
-    font-weight: 400;
-    font-size: 0.9rem;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .menu__link:hover{
@@ -33,18 +68,23 @@
 .logo h2{
     color: var(--primary-color);
 }
-
+.logo-link{
+    width: 180px;
+    height: 100px;
+    /* background-color: white; */
+    margin-left: 15px;
+    margin-top: 15px;
+    
+}
 .logo{
-    display: flex;
-    align-items: center;
-    justify-self: flex-start;
+    width: 100%;
+    height: 100%; 
 }
 
 .logo img{
-    width: 50%;
-    height: 50%;
     cursor: pointer;
-    object-fit: contain;
+    object-fit: cover;
+    /* background: red; */
 }
 
 .light__mode{
@@ -140,11 +180,11 @@
         display: block;
     }
 
-    .logo img{
-        width: 40%;
-        height: 40%;
-        cursor: pointer;
-        object-fit: contain;
+    .logo-link{
+        width: 140px;
+        height: 80px;
+        /* background-color: white; */
+        
         
     }
 
@@ -156,20 +196,18 @@
         height: 50px;
         line-height: 50px;
     }
+    
 
     .mobile__menu{
         font-size: 1rem;
     }
 
-    .logo h2{
-        font-size: 1.3rem;
-    }
-
-    .logo img{
-        width: 30%;
-        height: 30%;
-        cursor: pointer;
-        object-fit: contain;
-        margin-bottom: 15px;
+    .logo-link{
+        width: 120px;
+        height: 60px;
+        /* background-color: white; */
+        
+        margin-top: 0;
+        padding-bottom: 20px;
     }
 }

@@ -1,35 +1,56 @@
 import React from "react";
 import front from "../../images/front.svg";
 import "../../styles/hero.css";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="section hero__section" id="home">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="section hero__section"
+      id="home"
+    >
       <div className="container">
         <div className="hero__wrapper">
-          <div className="hero__content">
+          <motion.div
+            initial={{ y: -150 }}
+            animate={{ y: -50 }}
+            transition={{ duration: 1 }}
+            className="hero__content"
+          >
             <div>
-              <h2> We Provide Perfect</h2>
-              <h2> Service To Create Digital </h2>
-              <h2> Presence for your buisness</h2>
+              <h2> It’s how the world </h2>
+              <h2> sees you! </h2>
             </div>
             <p className="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              expedita vel totam. Culpa, fasilis iusto
+              Web design is not about making a website—it is about making an
+              investment in your organization. our web designs takes into
+              account more than just aesthetics… we'll build it as a reflection
+              of you, your company, and your vision.
             </p>
 
-            <div className="hero__btns">
-              <button className="primary__btn">Contact Us Now</button>
-            </div>
-          </div>
-          <div className="hero__img__wrapper">
+            <Link to="/contactus">
+              <div className="hero__btns">
+                <button className="primary__btn">Contact Us Now</button>
+              </div>
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={{ y: -150 }}
+            animate={{ y: -50 }}
+            transition={{ duration: 1 }}
+            className="hero__img__wrapper"
+          >
             <div className="hero__img">
               <img src={front} alt="hero-img" />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

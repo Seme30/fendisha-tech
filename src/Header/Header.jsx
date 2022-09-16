@@ -58,7 +58,19 @@ const Header = ({ theme, toggleTheme }) => {
   //   })
   // }
 
-  const toggleMenu = ()=> menuRef.current.classList.toggle('menu__active')
+  const toggleMenu = ()=> {
+    const navLinks = document.querySelectorAll('.menu__item')
+    navLinks.forEach((link, index)=>{
+      if(link.style.animation){
+        link.style.animation = ``
+      } else{
+        link.style.animation = `navLinkFade 0.5s ease-in forwards ${index/7 + 0.2}s` 
+      }
+    })
+
+    menuRef.current.classList.toggle('menu__active')
+
+}
   
 
   return (

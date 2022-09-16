@@ -99,4 +99,10 @@ img{
 
 .secondary__btn{
     background: var(--btn-primary-bg);
+    border: 1px solid var(--btn-secondary-bg);
+}
+
+.secondary__btn:hover{
+    background: var(--btn-secondary-bg);
+    border: 1px solid var(--btn-primary-bg);
 }
