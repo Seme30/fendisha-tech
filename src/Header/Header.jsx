@@ -28,8 +28,8 @@ const nav__links = [
 const Header = ({ theme, toggleTheme }) => {
 
   const headerRef = useRef(null)
-  const menuRef = useRef(null)
   const [dropdown, setDropdown] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const headerFunc = ()=>{
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop> 80){
@@ -41,9 +41,9 @@ const Header = ({ theme, toggleTheme }) => {
 
   useEffect(()=>{
     window.addEventListener('scroll', headerFunc)
-
     return ()=> window.removeEventListener('scroll', headerFunc)
   }, [])
+  
 
   // const handleClick = e => {
   //   e.preventDefault()
@@ -60,15 +60,17 @@ const Header = ({ theme, toggleTheme }) => {
 
   const toggleMenu = ()=> {
     const navLinks = document.querySelectorAll('.menu__item')
-    navLinks.forEach((link, index)=>{
+    const nav = document.querySelector('.navigation')
+
+    nav.classList.toggle('nav-active')
+    setOpen(!open)
+      navLinks.forEach((link, index)=>{
       if(link.style.animation){
         link.style.animation = ``
       } else{
         link.style.animation = `navLinkFade 0.5s ease-in forwards ${index/7 + 0.2}s` 
       }
     })
-
-    menuRef.current.classList.toggle('menu__active')
 
 }
   
@@ -79,7 +81,7 @@ const Header = ({ theme, toggleTheme }) => {
         <div className="nav__wrapper">
           {/* logo */}
           <Link to='/' className="logo-link">
-          <div className="logo"ref={menuRef}>
+          <div className="logo">
            
             <img src={ theme==='light-theme'? Logolight: Logo} alt ='logo'>
             
@@ -89,7 +91,7 @@ const Header = ({ theme, toggleTheme }) => {
           </Link>
 
           {/* navigation */}
-          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
+          <div className="navigation">
             <ul className="menu">
               {nav__links.map((item, index) => {
                 if (item.display === "Services") {
@@ -97,8 +99,9 @@ const Header = ({ theme, toggleTheme }) => {
                     <li
                     className="menu__item"
                       key={index}
-                      onMouseEnter={() => setDropdown(true)}
-                      onMouseLeave={() => setDropdown(false)}
+                      onClick={() => setDropdown(!dropdown)}
+                      // onMouseEnter={() => setDropdown(true)}
+                      onMouseLeave={()=>setDropdown(false)}
                     >
                       <Link to={item.path} className="menu__link">{item.display}</Link>
                       {dropdown && <Dropdown />}
@@ -122,7 +125,6 @@ const Header = ({ theme, toggleTheme }) => {
             <span onClick={toggleTheme}>
               {theme === "light-theme" ? (
                 <span>
-                 
                   <i class="ri-moon-line"></i>Dark
                 </span>
               ) : (
@@ -134,9 +136,9 @@ const Header = ({ theme, toggleTheme }) => {
           </div>
 
           <span className="mobile__menu" onClick={toggleMenu}>
-            <i class="ri-menu-line">
-
-            </i>
+            {open? <i class="ri-close-line">
+            </i>:  <i class="ri-menu-line">
+            </i>}
           </span>
         </div>
       </div>

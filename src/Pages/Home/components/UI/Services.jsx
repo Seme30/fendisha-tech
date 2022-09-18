@@ -33,7 +33,7 @@ const serviceData = [
 const Services = () => {
   return (
     <motion.section 
-    initial={{ opacity: 0 }}
+    initial={{ opacity: 0.7 }}
            whileInView={{ opacity: 1 }}
            transition={{ duration: 1.5 }}
     id="service">
@@ -48,7 +48,7 @@ const Services = () => {
           <div className="service__item_wrapper">
             {serviceData.map((item, index) => (
               <motion.div 
-              initial={{ scale: 0.7 }}
+              initial={{ scale: 0.9 }}
                   whileInView={{ scale: 1 }}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5

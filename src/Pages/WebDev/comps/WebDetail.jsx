@@ -36,14 +36,14 @@ const WebDetail = () => {
     <section className="section web__section">
       <div className="container">
       <motion.h6 
-      initial={{ x: -100, opacity: 0.5}}
+      initial={{ x: -100, opacity: 0.7}}
       whileInView={{ x: 0, opacity: 1}}
       transition={{duration: 1}}
       className="subtitle other_service">Other Services</motion.h6>
         <div className="webdetail__wrapper">
           {webDetail.map((item, index) => (
             <motion.div 
-            initial={{ scale: 0.7 }}
+            initial={{ scale: 0.9 }}
                   whileInView={{ scale: 1 }}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5
