@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/appdetail.css";
 import lottie from "lottie-web";
-import mobileapp from "../../../animations/mobile-development.json";
+import mobileapp from "../../../anim/mobile-development.json";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion'
 

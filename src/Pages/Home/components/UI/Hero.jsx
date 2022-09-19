@@ -1,5 +1,5 @@
 import React from "react";
-import front from "../../images/front.svg";
+import front from "../../../../images/front.svg";
 import "../../styles/hero.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";

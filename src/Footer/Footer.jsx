@@ -57,8 +57,7 @@ const Footer = ({ theme }) => {
             <p className="description">Grow with us</p>
             <p className="small__text description">
               {" "}
-              Fendisha is an Ethiopian-based Professional IT Solution and
-              Digital Marketing Company. Which Offers All IT-Related Services
+              Fendisha is a Digital Agency which Offers All in One IT-Related Services.
               Website Design | Mobile App Development | Graphic Design | and
               Other IT-Related Services
             </p>

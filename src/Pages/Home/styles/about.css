@@ -34,8 +34,10 @@
     padding: 20px 20px 20px 0px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     column-gap: 0.2rem;
     margin-top: 15px;
+
 }
 
 .choose__us-icon {
@@ -47,13 +49,19 @@
     justify-content: center;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
-    margin-top: 25px;
-    margin-left: 60px;
+    /* margin-top: 25px;
+    margin-left: 60px; */
+
 }
 
 .choose__us-icon i{
     color: var(--primary-color);
     font-size: 2rem;
+}
+
+.choose__us-content{
+    margin-left: 15px;
+
 }
 
 .contact_btn{
@@ -90,6 +98,17 @@
     }
     .about__content, .about__img{
         width: 100%;
+    }
+
+    .about__content{
+        padding: 0;
+    }
+
+    .choose__us-item{
+        padding: 0;
+    }
+    .choose__us-content{
+        padding: 0;
     }
     /* .about__img{
         display: none;

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import "../../styles/about.css";
 // import Developer from "../../images/Developer.svg";
 import lottie from "lottie-web";
-import developerteam from "../../../../animations/developer-team.json";
+import developerteam from "../../../../anim/developer-team.json";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion'
 

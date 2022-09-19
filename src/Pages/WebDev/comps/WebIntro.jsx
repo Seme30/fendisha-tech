@@ -2,7 +2,7 @@ import React, {useEffect, useRef } from "react";
 import lottie from "lottie-web";
 // import website from "../images/website.svg";
 import "../styles/webintro.css";
-import developerblue from "../../../animations/developer-blue.json";
+import developerblue from "../../../anim/developer-blue.json";
 import { motion } from 'framer-motion'
 
 const WebIntro = () => {

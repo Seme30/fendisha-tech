@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/webdetail.css";
-import img1 from '../images/jscode.svg'
-import content from '../images/Content.svg'
-import landing from '../images/Landing_Page.svg'
-import apis from '../images/api.svg'
+import img1 from '../../../images/jscode.svg'
+import content from '../../../images/Content.svg'
+import landing from '../../../images/Landing_Page.svg'
+import apis from '../../../images/api.svg'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -12,22 +12,22 @@ const webDetail = [
   {
     imgUrl: content,
     title: "CMS",
-    desc: "If you are in need of content management system with wordpress or drupal, you are in the right place",
+    desc: "We design, develop and implement content management systems for different types of businesses.",
   },
   {
     imgUrl: landing,
     title: "Landing page",
-    desc: "If you are in need of a landing page to be designed for your website, you are on the right spot, we will deliver you the code in no time",
+    desc: "We create a stunning landing page that will increase website traffic and make you look like a professional business owner.",
   },
   {
     imgUrl: img1,
     title: "E-commerce",
-    desc: "If you are in need of an e-commerce website with your own requirements, you can contact us with the link below",
+    desc: "We Provide Easy-to-use e-commerce website. We want to work with you because we value your business and its success.",
   },
   {
     imgUrl: apis,
     title: "Third-Party API integration",
-    desc: "If you wish to integrate your system with other third party services, you are in the right place, you can contact us with the link below",
+    desc: "We integrate with third-party APIs to help businesses connect, grow and drive revenue.",
   },
 ];
 

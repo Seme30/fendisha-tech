@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/appdesc.css";
-import phone from "../images/Smartphone.svg";
+import lottie from "lottie-web";
+import mobileapp from "../../../anim/mobile-app-showcase.json";
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const AppDescribe = () => {
+
+
+  const anime = useRef(null);
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: anime.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: mobileapp,
+    });
+    return () => lottie.stop();
+    // More logic goes here
+  }, []);
+
   return (
     <section 
     className="section app__section">
@@ -28,14 +45,16 @@ const AppDescribe = () => {
               <br />
               Build an App for your Business
             </p>
+            <Link to="/contactus">
             <button className="secondary__btn">Contact us</button>
+            </Link>
           </motion.div>
           <motion.div 
           initial={{ x: 50, opacity: 0.3}}
           whileInView={{ x: 0, opacity: 1}}
           transition={{duration: 0.5}}
           className="app__img">
-            <img src={phone} alt="app-img" />
+            <div ref={anime} alt="app-img"></div>
           </motion.div>
 
 

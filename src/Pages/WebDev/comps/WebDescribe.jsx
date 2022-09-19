@@ -1,5 +1,5 @@
 import React from "react";
-import jscode from "../images/jscode.svg";
+import jscode from "../../../images/jscode.svg";
 import "../styles/webdescribe.css";
 import { motion } from 'framer-motion'
 

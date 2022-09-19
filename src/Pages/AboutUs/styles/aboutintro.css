@@ -53,15 +53,11 @@
 
 @media only screen and (max-width: 576px){
     
-    
-    .service__item{
-    width: 100%;
-}
 .techs{
     font-size: 1rem;
 }
 
     .tech__item{
-        width: 50%;
+        width: 40%;
     }
 }

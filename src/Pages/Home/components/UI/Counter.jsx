@@ -100,7 +100,7 @@ const Counter = () => {
             whileInView={{ scale: 1, opacity: 1}}
             transition={{duration: 1}}
             className="counter__item">
-              <div className="counter__number">18</div>
+              <div className="counter__number">15</div>
               <div className="counter__title">Projects Complete</div>
             </motion.div>
         </div>

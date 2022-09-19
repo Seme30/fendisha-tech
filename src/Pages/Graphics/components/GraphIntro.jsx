@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 // import designer from "../images/Designer1.svg";
 import "../styles/graphintro.css";
 import lottie from "lottie-web";
-import designer from "../../../animations/designer.json";
+import designer from "../../../anim/designer.json";
 import { Link } from "react-router-dom";
 
 const GraphIntro = () => {

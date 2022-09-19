@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState} from "react";
-import Logo from '../Pages/Home/images/logo.png'
-import Logolight from '../Pages/Home/images/Fendisha-light.png'
+import Logo from '../images/logo.png'
+import Logolight from '../images/Fendisha-light.png'
 import { Link } from "react-router-dom";
 import Dropdown from "./DropDown";
 import "./header.css";
