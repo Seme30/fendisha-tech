@@ -26,7 +26,7 @@ const ContactIntro = () => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
-          if (response.status == 200) {
+          if (response.status === 200) {
             setSent(true);
             setText(response.text);
           }
