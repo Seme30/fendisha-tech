@@ -4,6 +4,7 @@ import Logolight from '../images/Fendisha-light.png'
 import { Link } from "react-router-dom";
 import Dropdown from "./DropDown";
 import MobileNav from "./MobileNav";
+import useIsMobile from "../hooks/useIsMobile";
 import "./header.css";
 
 const nav__links = [
@@ -27,6 +28,7 @@ const Header = ({ theme, toggleTheme }) => {
   const headerRef = useRef(null)
   const [dropdown, setDropdown] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const isMobile = useIsMobile(992); // 992px breakpoint matches CSS
 
   const headerFunc = ()=>{
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop> 80){
@@ -62,6 +64,22 @@ const Header = ({ theme, toggleTheme }) => {
   const closeMobileNav = () => {
     setMobileNavOpen(false);
   }
+
+  // Close mobile nav when screen size changes to desktop
+  useEffect(() => {
+    if (!isMobile && mobileNavOpen) {
+      setMobileNavOpen(false);
+      // Also reset body overflow
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMobile, mobileNavOpen]);
+
+  // Close dropdown when switching to mobile
+  useEffect(() => {
+    if (isMobile && dropdown) {
+      setDropdown(false);
+    }
+  }, [isMobile, dropdown]);
   
 
   return (
@@ -122,19 +140,24 @@ const Header = ({ theme, toggleTheme }) => {
             </span>
           </div>
 
-          <span className="mobile__menu" onClick={toggleMobileNav}>
-            <i className="ri-menu-line"></i>
-          </span>
+          {/* Mobile Menu Button - Only show on mobile devices */}
+          {isMobile && (
+            <span className="mobile__menu" onClick={toggleMobileNav}>
+              <i className="ri-menu-line"></i>
+            </span>
+          )}
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <MobileNav
-        isOpen={mobileNavOpen}
-        onClose={closeMobileNav}
-        theme={theme}
-        toggleTheme={toggleTheme}
-      />
+      {/* Mobile Navigation - Only show on mobile devices */}
+      {isMobile && (
+        <MobileNav
+          isOpen={mobileNavOpen}
+          onClose={closeMobileNav}
+          theme={theme}
+          toggleTheme={toggleTheme}
+        />
+      )}
     </header>
   );
 };

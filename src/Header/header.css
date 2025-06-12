@@ -144,7 +144,7 @@
 .mobile__menu {
     color: #fff;
     font-size: 1.3rem;
-    display: none;
+    display: flex;
     cursor: pointer;
     padding: 8px 12px;
     margin-right: 15px;
@@ -157,9 +157,15 @@
     position: relative;
     height: 40px;
     width: 40px;
-    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Desktop styles - ensure mobile elements are hidden */
+@media (min-width: 992px) {
+    .mobile__menu {
+        display: none !important;
+    }
 }
 
 .mobile__menu:hover {
@@ -178,6 +184,30 @@
 }
 
 /* ====== responsive ====== */
+
+/* Desktop styles - hide mobile menu button */
+@media only screen and (min-width: 993px) {
+    .mobile__menu {
+        display: none !important;
+    }
+
+    .navigation {
+        display: block !important;
+        position: static !important;
+        background: transparent !important;
+        width: auto !important;
+        height: auto !important;
+        transform: none !important;
+    }
+
+    .menu {
+        display: flex !important;
+        flex-direction: row !important;
+        background: transparent !important;
+        width: auto !important;
+        height: auto !important;
+    }
+}
 
 @media only screen and (max-width: 992px) {
     .navigation {
@@ -273,7 +303,7 @@
     }
 
     .mobile__menu {
-        display: flex;
+        display: flex !important;
     }
 
     .logo-link {
