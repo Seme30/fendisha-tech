@@ -10,22 +10,22 @@ import Graphics from "./Pages/Graphics/Graphics";
 import AppDevelopment from "./Pages/AppDev/AppDevelopment";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import NotFound from "./Pages/NotFound/NotFound";
-import LoadingScreen from "./components/LoadingScreen";
-import ScrollProgress from "./components/ScrollProgress";
-import BackToTop from "./components/BackToTop";
+// import LoadingScreen from "./components/LoadingScreen";
+// import ScrollProgress from "./components/ScrollProgress";
+// import BackToTop from "./components/BackToTop";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [theme, setTheme] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   const toggleTheme = () => {
     theme === "" ? setTheme("light-theme") : setTheme("");
   };
 
-  const handleLoadingComplete = () => {
-    setIsLoading(false);
-  };
+  // const handleLoadingComplete = () => {
+  //   setIsLoading(false);
+  // };
 
   useEffect(() => {
     document.body.className = theme;
@@ -40,14 +40,14 @@ function App() {
     };
   }, []);
 
-  if (isLoading) {
-    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
-  }
+  // if (isLoading) {
+  //   return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  // }
 
   return (
     <Router>
       <ScrollToTop />
-      <ScrollProgress />
+      {/* <ScrollProgress /> */}
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -58,7 +58,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer theme={theme} />
-      <BackToTop />
+      {/* <BackToTop /> */}
     </Router>
   );
 }

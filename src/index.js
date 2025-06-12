@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import App from './App';
+import 'remixicon/fonts/remixicon.css';
 
+// Get the root element
+const container = document.getElementById('root');
 
-import 'remixicon/fonts/remixicon.css'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// Create root with React 18's createRoot
+const root = createRoot(container);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
+// Render with React 18's concurrent features
 root.render(
   <React.StrictMode>
     <App />
