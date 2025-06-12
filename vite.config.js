@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react({
     // Enable React Fast Refresh
     fastRefresh: true,
-    // Include .jsx files
-    include: "**/*.{jsx,tsx}"
+    // Include .jsx and .js files with JSX
+    include: "**/*.{js,jsx,ts,tsx}"
   })],
   server: {
     port: 3000,
