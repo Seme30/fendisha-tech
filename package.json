@@ -30,7 +30,10 @@
     "preview": "vite preview",
     "start": "vite",
     "lint": "eslint src --ext .js,.jsx --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint src --ext .js,.jsx --fix"
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "security": "npm audit --audit-level high"
   },
 
   "browserslist": {
@@ -45,8 +48,14 @@
       "last 1 safari version"
     ]
   },
+  "overrides": {
+    "webpack": "^5.95.0",
+    "loader-utils": "^3.3.1",
+    "json5": "^2.2.3",
+    "minimatch": "^9.0.5"
+  },
   "engines": {
-    "node": "18.x",
-    "npm": ">=8.0.0"
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   }
 }
