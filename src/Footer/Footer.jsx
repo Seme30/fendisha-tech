@@ -25,10 +25,6 @@ const quicklinks02 = [
     display: "Home",
   },
   {
-    path: "/abouts",
-    display: "About Us",
-  },
-  {
     path: "/contactus",
     display: "Contact us",
   },
@@ -39,7 +35,7 @@ const quicklinks03 = [
     display: "Addis Ababa, Ethiopia",
   },
   {
-    display: "+251949624951",
+    display: "+251900000000",
   },
   {
     display: "info@fendishatech.com",
@@ -48,6 +44,11 @@ const quicklinks03 = [
 
 const Footer = ({ theme }) => {
   const year = new Date().getFullYear();
+
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -67,7 +68,7 @@ const Footer = ({ theme }) => {
             <ul className="quick__links">
               {quicklinks01.map((item, index) => (
                 <li className="quick__link-item" key={index}>
-                  <Link to={item.path}> {item.display}</Link>
+                  <Link to={item.path} onClick={handleLinkClick}> {item.display}</Link>
                 </li>
               ))}
             </ul>
@@ -77,7 +78,7 @@ const Footer = ({ theme }) => {
             <ul className="quick__links">
               {quicklinks02.map((item, index) => (
                 <li className="quick__link-item" key={index}>
-                  <Link to={item.path}> {item.display}</Link>
+                  <Link to={item.path} onClick={handleLinkClick}> {item.display}</Link>
                 </li>
               ))}
             </ul>

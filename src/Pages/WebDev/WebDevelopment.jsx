@@ -1,17 +1,16 @@
 import React from 'react'
 import './webdevelopment.css'
-import WebIntro from './comps/WebIntro'
-import WebDescribe from './comps/WebDescribe'
-import WebDetail from './comps/WebDetail'
+import WebTechnologies from './comps/WebTechnologies'
+import WebPortfolio from './comps/WebPortfolio'
+import WebProcess from './comps/WebProcess'
 
 const WebDevelopment = () => {
   return (
     <>
-     <WebIntro />
-    <WebDescribe />
-    <WebDetail />
+      <WebTechnologies />
+      <WebPortfolio />
+      <WebProcess />
     </>
-   
   )
 }
 

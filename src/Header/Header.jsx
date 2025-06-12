@@ -15,10 +15,6 @@ const nav__links = [
     display: "Services",
   },
   {
-    path: "/abouts",
-    display: "About",
-  },
-  {
     path: "/contactus",
     display: "Contact",
   },
@@ -97,26 +93,24 @@ const Header = ({ theme, toggleTheme }) => {
                 if (item.display === "Services") {
                   return (
                     <li
-                    className="menu__item"
+                      className="menu__item dropdown-container"
                       key={index}
-                      onClick={() => setDropdown(!dropdown)}
-                      // onMouseEnter={() => setDropdown(true)}
-                      onMouseLeave={()=>setDropdown(false)}
+                      onMouseEnter={() => setDropdown(true)}
+                      onMouseLeave={() => setDropdown(false)}
                     >
-                      <Link to={item.path} className="menu__link">{item.display}</Link>
+                      <span className="menu__link">{item.display}</span>
                       {dropdown && <Dropdown />}
                     </li>
                   );
                 }
                 return (
                   <li className="menu__item" key={index}>
-                  <Link to={item.path} className="menu__link">
-                    {item.display}
-                  </Link>
-                </li>
+                    <Link to={item.path} className="menu__link">
+                      {item.display}
+                    </Link>
+                  </li>
                 )
-              }
-              )}
+              })}
             </ul>
           </div>
 

@@ -32,11 +32,14 @@ const Hero = () => {
               of you, your company, and your vision.
             </p>
 
-            <Link to="/contactus">
-              <div className="hero__btns">
+            <div className="hero__btns">
+              <Link to="/contactus">
                 <button className="primary__btn">Contact Us Now</button>
-              </div>
-            </Link>
+              </Link>
+              <Link to="#service">
+                <button className="secondary__btn">Our Services</button>
+              </Link>
+            </div>
           </motion.div>
           <motion.div
             initial={{ y: -150 }}

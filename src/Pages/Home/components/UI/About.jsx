@@ -49,8 +49,8 @@ const About = () => {
           <div className="about__content">
             <div className="about__content-wrapper">
               <h6 className="subtitle">Why choose us</h6>
-              <h2>Specialist in aviding clients on</h2>
-              <h2 className="highlight"> financial challenges</h2>
+              <h2>Specialists in helping clients with</h2>
+              <h2 className="highlight"> technical challenges</h2>
             </div>
             <div className="choose__item-wrapper">
               {chooseData.map((item, index) => (
