@@ -141,113 +141,240 @@
     cursor: pointer;
 }
 
-.mobile__menu{
+.mobile__menu {
     color: #fff;
     font-size: 1.3rem;
     display: none;
-    /* background-color: red; */
     cursor: pointer;
-    padding: 0px 25px;
+    padding: 8px 12px;
     margin-right: 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.light-theme .mobile__menu{
+.mobile__menu:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.light-theme .mobile__menu {
     color: #000;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.light-theme .mobile__menu:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /* ====== responsive ====== */
 
 @media only screen and (max-width: 992px) {
-
-    /* .header{
-        height: 50px;
-        line-height: 50;
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
         width: 100%;
-    } */
-    .navigation{
-        position: absolute;
-        top: 10vh;
-      right: 0;
-      background-color: var(--nav-bg);
-      width: 30%;
-      height: 100%;
-      transform: translateX(200%);
-      transition: transform 0.5s ease-in;
-      z-index: 99999;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        transform: translateX(100%);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .menu{
+    .menu {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background: #0c123d;
+        gap: 2rem;
         width: 100%;
-        height: 90%;
+        height: 100%;
+        padding: 2rem;
     }
 
-    .menu__item{
-        /* background-color: aqua; */
+    .menu__item {
         width: 100%;
-        height: 100%; 
-        opacity: 0; 
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.3s ease;
     }
 
-    .ri-close-line{
-        height: 20px;
-        width: 20px;
+    .nav-active .menu__item {
+        opacity: 1;
+        transform: translateY(0);
     }
 
-    .menu__link{
+    .menu__item:nth-child(1) { transition-delay: 0.1s; }
+    .menu__item:nth-child(2) { transition-delay: 0.2s; }
+    .menu__item:nth-child(3) { transition-delay: 0.3s; }
+    .menu__item:nth-child(4) { transition-delay: 0.4s; }
+
+    .menu__link {
         display: flex;
         align-items: center;
         justify-content: center;
-        
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
-    .nav-active{
+    .menu__link:hover {
+        background: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    .dropdown-container .menu__link {
+        cursor: pointer;
+    }
+
+    .nav-active {
         transform: translateX(0%);
     }
 
-    .light-theme .menu{
-        background: #f7f7f7;
+    .light-theme .navigation {
+        background: rgba(255, 255, 255, 0.95);
     }
 
-    .light-theme .navigation{
-        background: rgba(88, 89, 90, 0.868);
+    .light-theme .menu__link {
+        color: #333;
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.2);
     }
 
-    .mobile__menu{
-        display: block;
+    .light-theme .menu__link:hover {
+        background: var(--primary-color);
+        color: white;
     }
 
-    .logo-link{
+    .mobile__menu {
+        display: flex;
+    }
+
+    .logo-link {
         width: 140px;
         height: 80px;
-        /* background-color: white; */  
-        
     }
 
+    /* Close button styling */
+    .mobile__menu .ri-close-line {
+        font-size: 1.8rem;
+    }
+
+    /* Mobile menu overlay */
+    .navigation::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg,
+            rgba(102, 126, 234, 0.1) 0%,
+            rgba(240, 147, 251, 0.1) 100%);
+        z-index: -1;
+    }
+
+    /* Animation keyframes */
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Smooth mobile menu button animation */
+    .mobile__menu i {
+        transition: transform 0.3s ease;
+    }
+
+    .mobile__menu:active i {
+        transform: scale(0.9);
+    }
 }
 
-@media only screen and (max-width: 768px){
-    .header{
+@media only screen and (max-width: 768px) {
+    .header {
         width: 100%;
-        height: 50px;
-        line-height: 50px;
-    }
-    
-
-    .mobile__menu{
-        font-size: 1rem;
+        height: 60px;
+        line-height: 60px;
     }
 
-    .logo-link{
+    .mobile__menu {
+        font-size: 1.2rem;
+        height: 36px;
+        width: 36px;
+        padding: 6px;
+    }
+
+    .logo-link {
         width: 120px;
         height: 60px;
-        /* background-color: white; */
-        
         margin-top: 0;
         padding-bottom: 20px;
+    }
+
+    .menu__link {
+        font-size: 1.3rem;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .navigation {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mobile__menu {
+        font-size: 1.1rem;
+        height: 32px;
+        width: 32px;
+        padding: 4px;
+        margin-right: 10px;
+    }
+
+    .logo-link {
+        width: 100px;
+        height: 50px;
+    }
+
+    .menu__link {
+        font-size: 1.2rem;
+        padding: 1rem;
+        max-width: 280px;
+    }
+
+    .menu {
+        gap: 1.5rem;
+        padding: 1rem;
     }
 }

@@ -17,9 +17,9 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          animations: ['framer-motion']
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          animations: ['framer-motion'],
+          utils: ['lottie-web']
         }
       }
     }

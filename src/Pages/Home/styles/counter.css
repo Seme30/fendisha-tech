@@ -16,7 +16,7 @@
 
 .counter__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 4rem 2rem;
     background: var(--glass-bg);
@@ -119,37 +119,66 @@
 }
 
 @media only screen and (max-width: 992px){
+    .counter__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+        margin: 1.5rem;
+    }
+
     .counter__number{
-        font-size: 2rem;
-    }
-
-    .counter__title{
-        font-size: 1.2rem;
-    }
-
-    .counter__item{
-        width: 30%;
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .counter__number{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .counter__title{
         font-size: 1rem;
     }
+
+    .counter__item{
+        padding: 2rem 1rem;
+    }
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 768px){
+    .counter__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem 1rem;
+        gap: 1.5rem;
+        margin: 1rem;
+    }
 
-    .counter__wrapper{
-        flex-direction: column;
+    .counter__number{
+        font-size: 2rem;
+    }
+
+    .counter__title{
+        font-size: 0.9rem;
     }
 
     .counter__item{
-        width: 100%;
-        margin-bottom: 30px;
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .counter__wrapper{
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        margin: 0.5rem;
+    }
+
+    .counter__item{
+        padding: 2rem 1rem;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .counter__number{
+        font-size: 2.5rem;
+    }
+
+    .counter__title{
+        font-size: 1rem;
     }
 }

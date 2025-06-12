@@ -135,42 +135,87 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .hero__section {
+        padding: 3rem 0;
+    }
+
     .hero__content h2 {
         font-size: 2.5rem;
-        line-height: 1.1;
+        line-height: 1.2;
     }
 
     .hero__wrapper {
         gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .hero__content .description {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .hero__btns {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .hero__section {
-        min-height: 80vh;
+        min-height: auto;
         padding: 2rem 0;
     }
 
+    .hero__wrapper {
+        flex-direction: column;
+        padding: 0 1.5rem;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero__content, .hero__img__wrapper {
+        width: 100%;
+    }
+
+    .hero__content {
+        order: 2;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero__img__wrapper {
+        order: 1;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
     .hero__content h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         line-height: 1.2;
         text-align: center;
+        margin-bottom: 1.5rem;
     }
 
     .hero__content .description {
         font-size: 1rem;
         text-align: center;
-        margin: 2rem auto;
+        margin: 1.5rem auto;
+        max-width: 100%;
     }
 
     .hero__btns {
         justify-content: center;
         margin-top: 2rem;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
     }
 
     .primary__btn, .secondary__btn {
-        padding: 12px 24px;
+        padding: 14px 28px;
         font-size: 0.9rem;
+        width: 100%;
+        max-width: 250px;
     }
 }
 

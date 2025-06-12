@@ -3,6 +3,7 @@ import Logo from '../images/logo.png'
 import Logolight from '../images/Fendisha-light.png'
 import { Link } from "react-router-dom";
 import Dropdown from "./DropDown";
+import MobileNav from "./MobileNav";
 import "./header.css";
 
 const nav__links = [
@@ -25,7 +26,7 @@ const Header = ({ theme, toggleTheme }) => {
 
   const headerRef = useRef(null)
   const [dropdown, setDropdown] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const headerFunc = ()=>{
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop> 80){
@@ -54,21 +55,13 @@ const Header = ({ theme, toggleTheme }) => {
   //   })
   // }
 
-  const toggleMenu = ()=> {
-    const navLinks = document.querySelectorAll('.menu__item')
-    const nav = document.querySelector('.navigation')
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!mobileNavOpen);
+  }
 
-    nav.classList.toggle('nav-active')
-    setOpen(!open)
-      navLinks.forEach((link, index)=>{
-      if(link.style.animation){
-        link.style.animation = ``
-      } else{
-        link.style.animation = `navLinkFade 0.5s ease-in forwards ${index/7 + 0.2}s` 
-      }
-    })
-
-}
+  const closeMobileNav = () => {
+    setMobileNavOpen(false);
+  }
   
 
   return (
@@ -129,13 +122,19 @@ const Header = ({ theme, toggleTheme }) => {
             </span>
           </div>
 
-          <span className="mobile__menu" onClick={toggleMenu}>
-            {open? <i class="ri-close-line">
-            </i>:  <i class="ri-menu-line">
-            </i>}
+          <span className="mobile__menu" onClick={toggleMobileNav}>
+            <i className="ri-menu-line"></i>
           </span>
         </div>
       </div>
+
+      {/* Mobile Navigation */}
+      <MobileNav
+        isOpen={mobileNavOpen}
+        onClose={closeMobileNav}
+        theme={theme}
+        toggleTheme={toggleTheme}
+      />
     </header>
   );
 };

@@ -23,6 +23,10 @@ const nav__links2 = [
 function Dropdown() {
   const [dropdown, setDropdown] = useState(false);
 
+  const handleLinkClick = () => {
+    setDropdown(false);
+  };
+
   return (
     <>
       <ul
@@ -35,7 +39,7 @@ function Dropdown() {
               <Link
                 to={item.path}
                 className={item.cName}
-                onClick={() => setDropdown(false)}
+                onClick={handleLinkClick}
               >
                 {item.display}
               </Link>
