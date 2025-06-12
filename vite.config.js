@@ -18,13 +18,52 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     target: 'esnext',
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
+      external: [],
+      onwarn(warning, warn) {
+        // Suppress eval warnings from lottie-web
+        if (warning.code === 'EVAL' && warning.id?.includes('lottie')) return;
+        warn(warning);
+      },
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          animations: ['framer-motion'],
-          icons: ['react-icons', 'react-remixicon', 'remixicon']
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
+            }
+            if (id.includes('lottie-web')) {
+              return 'vendor-lottie';
+            }
+            if (id.includes('react-icons') || id.includes('react-remixicon')) {
+              return 'vendor-icons';
+            }
+            return 'vendor-misc';
+          }
+
+          // Page-based chunks
+          if (id.includes('/Pages/Home/')) {
+            return 'page-home';
+          }
+          if (id.includes('/Pages/WebDev/')) {
+            return 'page-webdev';
+          }
+          if (id.includes('/Pages/AppDev/')) {
+            return 'page-appdev';
+          }
+          if (id.includes('/Pages/Graphics/')) {
+            return 'page-graphics';
+          }
+          if (id.includes('/Pages/ContactUs/')) {
+            return 'page-contact';
+          }
         }
       }
     }
